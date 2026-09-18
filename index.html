@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Launch Studio — SaaS launch + standing Grok bots</title>
+  <meta name="description" content="Get your free personalized SaaS launch + bot ops roadmap. Systems to launch and run the business — with Grok bots on standing duties. Close via LAUNCH + product → DM/call." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="wrap row">
+      <div class="brand">Launch Studio</div>
+      <a class="ghost" href="#apply">Apply for Launch Sprint</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero wrap">
+      <p class="eyebrow">For people launching digital / SaaS / online businesses</p>
+      <h1>Get your free personalized SaaS launch + bot ops roadmap — in under 30 seconds.</h1>
+      <p class="lede">Not another link-in-bio VSL. Not a motivational course dump. Systems to launch and run the business — with Grok bots on standing duties.</p>
+      <a class="btn primary" href="#lead">Get the roadmap</a>
+      <p class="fine">Page qualifies. Real close = reply <strong>LAUNCH</strong> + your product → DM/call.</p>
+    </section>
+
+    <section class="anti wrap">
+      <div class="card">
+        <h2>For / not for</h2>
+        <ul>
+          <li><strong>For:</strong> operators launching SaaS or online products who want standing systems + Grok bots on duty.</li>
+          <li><strong>Not for:</strong> link-in-bio VSL shoppers, motivational course collectors, or “one tool will change your life” browsers.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="lead" class="lead wrap">
+      <h2>Start with the problem</h2>
+      <p class="sub">One step. Then light contact. No spam.</p>
+
+      <form id="lead-form" novalidate>
+        <fieldset>
+          <legend>What’s your main problem with launching / running an online or SaaS business right now?</legend>
+          <label class="opt"><input type="radio" name="problem" value="offer" required /> I don’t have a clear offer / who it’s for</label>
+          <label class="opt"><input type="radio" name="problem" value="leads" /> I can’t get consistent leads without ads that feel scammy</label>
+          <label class="opt"><input type="radio" name="problem" value="systems" /> I launch once, then everything falls on me (no systems / bots)</label>
+          <label class="opt"><input type="radio" name="problem" value="next" /> I don’t know what to build next (product vs content vs funnel)</label>
+        </fieldset>
+
+        <div class="grid">
+          <label>First name
+            <input name="firstName" autocomplete="given-name" required />
+          </label>
+          <label>Email
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+          <label class="full">Phone
+            <input type="tel" name="phone" autocomplete="tel" required />
+          </label>
+        </div>
+
+        <label class="check">
+          <input type="checkbox" name="smsConsent" required />
+          I agree you can contact me by phone, SMS, or email about Launch Studio (no newsletter spam).
+        </label>
+
+        <button class="btn primary" type="submit">Get roadmap / Start</button>
+        <p id="lead-error" class="error" hidden></p>
+      </form>
+
+      <div id="post-lead" class="post-lead" hidden>
+        <div class="card success">
+          <h3>Roadmap claim received.</h3>
+          <p>Next: reply <strong>LAUNCH</strong> + your product on Instagram, or apply for Launch Sprint below. That’s the close — not a VSL checkout.</p>
+        </div>
+
+        <div class="card early">
+          <h3>Optional after lead — Launch Sprint Starter · $97</h3>
+          <p>Install checklist + first Grok bot duty brief + path into Launch Sprint apply / DM. Never replaces the human close.</p>
+          <button class="btn secondary" id="early-buy" type="button">Get Starter ($97) — demo checkout stub</button>
+          <p class="fine">Stripe wiring via <code>STRIPE_PRICE_ID</code> in README. Demo mode logs only.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="apply" class="apply wrap">
+      <h2>Apply for Launch Sprint</h2>
+      <p class="sub">Audition / apply language. Routes to DM/call handoff — not checkout.</p>
+      <form id="apply-form" novalidate>
+        <div class="grid">
+          <label>First name
+            <input name="firstName" required />
+          </label>
+          <label>Email
+            <input type="email" name="email" required />
+          </label>
+          <label class="full">Phone
+            <input type="tel" name="phone" required />
+          </label>
+          <label class="full">What you’re launching (1 line)
+            <input name="launching" required maxlength="160" />
+          </label>
+          <label>Stage
+            <select name="stage" required>
+              <option value="">Select…</option>
+              <option>Idea</option>
+              <option>Building</option>
+              <option>Live</option>
+              <option>Revenue</option>
+            </select>
+          </label>
+          <label>Main problem
+            <select name="problem" required>
+              <option value="">Select…</option>
+              <option value="offer">Clear offer / who it’s for</option>
+              <option value="leads">Consistent leads without scammy ads</option>
+              <option value="systems">Systems / bots so it doesn’t all fall on me</option>
+              <option value="next">What to build next</option>
+            </select>
+          </label>
+          <label class="full">Optional link (site / IG)
+            <input name="link" type="url" placeholder="https://" />
+          </label>
+        </div>
+        <label class="check">
+          <input type="checkbox" name="smsConsent" required />
+          SMS/phone consent for Launch Sprint follow-up.
+        </label>
+        <button class="btn primary" type="submit">Apply for Launch Sprint</button>
+        <p id="apply-msg" class="ok" hidden></p>
+      </form>
+    </section>
+
+    <section class="ladder wrap">
+      <h2>Offer ladder (page qualifies; call closes)</h2>
+      <ol>
+        <li><strong>Lead</strong> — free personalized roadmap</li>
+        <li><strong>Early buy</strong> — optional $97 Starter after lead</li>
+        <li><strong>LAUNCH + product → DM/call</strong> — Launch Sprint apply</li>
+        <li><strong>Later</strong> — Launch Desk / Operator Floor / Studio Bench (SaaS + standing bots upsell after relationship)</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <p>Systems to build, launch, and grow SaaS and online businesses — Grok bots on standing duties.</p>
+    <p class="fine">© Launch Studio · Operator brand · Not a link-in-bio VSL close</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

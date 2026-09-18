@@ -1,0 +1,11 @@
+{
+  "name": "launch-studio-lp",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Launch Studio personal-brand landing page — SaaS launch + standing Grok bots. Close = LAUNCH+product → DM/call.",
+  "scripts": {
+    "dev": "python3 -m http.server 5173 --directory .",
+    "start": "python3 -m http.server 5173 --directory .",
+    "build": "mkdir -p dist && cp index.html styles.css app.js dist/ && cp -r docs dist/docs"
+  }
+}
