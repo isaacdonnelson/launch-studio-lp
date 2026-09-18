@@ -1,5 +1,9 @@
 (function () {
   const leadForm = document.getElementById('lead-form');
+  const stepProblem = document.getElementById('step-problem');
+  const stepContact = document.getElementById('step-contact');
+  const problemStart = document.getElementById('problem-start');
+  const problemError = document.getElementById('problem-error');
   const postLead = document.getElementById('post-lead');
   const leadError = document.getElementById('lead-error');
   const applyForm = document.getElementById('apply-form');
@@ -13,6 +17,19 @@
     console.log('[Launch Studio]', key, payload);
   }
 
+  problemStart.addEventListener('click', () => {
+    problemError.hidden = true;
+    const chosen = leadForm.querySelector('input[name="problem"]:checked');
+    if (!chosen) {
+      problemError.textContent = 'Pick your main problem first.';
+      problemError.hidden = false;
+      return;
+    }
+    stepProblem.hidden = true;
+    stepContact.hidden = false;
+    stepContact.querySelector('input[name="firstName"]').focus();
+  });
+
   leadForm.addEventListener('submit', (e) => {
     e.preventDefault();
     leadError.hidden = true;
@@ -20,6 +37,8 @@
     if (!fd.get('problem')) {
       leadError.textContent = 'Pick your main problem first.';
       leadError.hidden = false;
+      stepProblem.hidden = false;
+      stepContact.hidden = true;
       return;
     }
     const payload = Object.fromEntries(fd.entries());
@@ -31,7 +50,6 @@
   });
 
   earlyBuy.addEventListener('click', () => {
-    // Demo stub — wire Stripe Checkout with STRIPE_PRICE_ID later
     save('ls_early_buy', { sku: 'launch-sprint-starter', price: 97, mode: 'demo' });
     earlyBuy.textContent = 'Demo logged — wire Stripe in README';
     earlyBuy.disabled = true;

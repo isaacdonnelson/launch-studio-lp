@@ -31,41 +31,66 @@
           <li><strong>For:</strong> operators launching SaaS or online products who want standing systems + Grok bots on duty.</li>
           <li><strong>Not for:</strong> link-in-bio VSL shoppers, motivational course collectors, or “one tool will change your life” browsers.</li>
         </ul>
+        <p class="fine anti-fit">Might not be for you if you want a silver-bullet course instead of installing a launch system.</p>
+        <p class="fine"><strong>Install, don’t study.</strong> We optimize for 3–4 qualified calls — not vanity leads.</p>
+      </div>
+    </section>
+
+    <section class="proof wrap">
+      <div class="card proof-card">
+        <p class="eyebrow">Proof (honest)</p>
+        <h2>Standing Duties desk — not toy bots</h2>
+        <p class="sub">Operator brand artifact: one bot · one duty · one owner. This page qualifies; LAUNCH + product closes in DM/call.</p>
+        <div class="desk" aria-hidden="true">
+          <div class="desk-bar">Launch Studio · Duty roster</div>
+          <ul class="desk-list">
+            <li><span class="dot"></span> Writer — reel scripts</li>
+            <li><span class="dot on"></span> Counsel — Seven Holds QA</li>
+            <li><span class="dot"></span> Producer — IG packs</li>
+            <li><span class="dot on"></span> Editor — route + locks</li>
+          </ul>
+          <p class="desk-foot">Systems · SaaS launch · Grok on standing duties</p>
+        </div>
+        <p class="fine">Named customer proof TBD — we won’t invent volume. Process proof ships first.</p>
       </div>
     </section>
 
     <section id="lead" class="lead wrap">
       <h2>Start with the problem</h2>
-      <p class="sub">One step. Then light contact. No spam.</p>
+      <p class="sub">Problem first → Start → contact. No spam.</p>
 
       <form id="lead-form" novalidate>
-        <fieldset>
-          <legend>What’s your main problem with launching / running an online or SaaS business right now?</legend>
-          <label class="opt"><input type="radio" name="problem" value="offer" required /> I don’t have a clear offer / who it’s for</label>
-          <label class="opt"><input type="radio" name="problem" value="leads" /> I can’t get consistent leads without ads that feel scammy</label>
-          <label class="opt"><input type="radio" name="problem" value="systems" /> I launch once, then everything falls on me (no systems / bots)</label>
-          <label class="opt"><input type="radio" name="problem" value="next" /> I don’t know what to build next (product vs content vs funnel)</label>
-        </fieldset>
-
-        <div class="grid">
-          <label>First name
-            <input name="firstName" autocomplete="given-name" required />
-          </label>
-          <label>Email
-            <input type="email" name="email" autocomplete="email" required />
-          </label>
-          <label class="full">Phone
-            <input type="tel" name="phone" autocomplete="tel" required />
-          </label>
+        <div id="step-problem">
+          <fieldset>
+            <legend>What’s your main problem with launching / running an online or SaaS business right now?</legend>
+            <label class="opt"><input type="radio" name="problem" value="offer" required /> I don’t have a clear offer / who it’s for</label>
+            <label class="opt"><input type="radio" name="problem" value="leads" /> I can’t get consistent leads without ads that feel scammy</label>
+            <label class="opt"><input type="radio" name="problem" value="systems" /> I launch once, then everything falls on me (no systems / bots)</label>
+            <label class="opt"><input type="radio" name="problem" value="next" /> I don’t know what to build next (product vs content vs funnel)</label>
+          </fieldset>
+          <button class="btn primary" type="button" id="problem-start">Start</button>
+          <p id="problem-error" class="error" hidden></p>
         </div>
 
-        <label class="check">
-          <input type="checkbox" name="smsConsent" required />
-          I agree you can contact me by phone, SMS, or email about Launch Studio (no newsletter spam).
-        </label>
-
-        <button class="btn primary" type="submit">Get roadmap / Start</button>
-        <p id="lead-error" class="error" hidden></p>
+        <div id="step-contact" hidden>
+          <div class="grid">
+            <label>First name
+              <input name="firstName" autocomplete="given-name" required />
+            </label>
+            <label>Email
+              <input type="email" name="email" autocomplete="email" required />
+            </label>
+            <label class="full">Phone
+              <input type="tel" name="phone" autocomplete="tel" required />
+            </label>
+          </div>
+          <label class="check">
+            <input type="checkbox" name="smsConsent" required />
+            I agree you can contact me by phone, SMS, or email about Launch Studio (no newsletter spam).
+          </label>
+          <button class="btn primary" type="submit">Get roadmap</button>
+          <p id="lead-error" class="error" hidden></p>
+        </div>
       </form>
 
       <div id="post-lead" class="post-lead" hidden>
